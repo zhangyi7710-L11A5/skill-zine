@@ -1,0 +1,40 @@
+name: Sync Skill Registry
+
+on:
+  schedule:
+    # Runs every day at 00:00 UTC
+    - cron: "0 0 * * *"
+  # Also allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
+
+# Give the workflow permission to push commits
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run sync script
+        run: python scripts/sync-registry.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "skill-zine-bot"
+          git config user.email "bot@skillzine.dev"
+          git add registry.json public/registry.json
+          if git diff --cached --quiet; then
+            echo "No changes — skipping commit."
+          else
+            git commit -m "🤖 Auto-sync: $(date -u +'%Y-%m-%d')"
+            git push
+            echo "✅ Pushed updated registry."
+          fi
