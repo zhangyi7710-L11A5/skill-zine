@@ -377,8 +377,8 @@ def main() -> int:
     with open(REGISTRY_PATH, "w", encoding="utf-8") as f:
         f.write(json_str)
 
-    # Also write to public/ for GitHub Pages
-    public_registry = ROOT / "public" / "registry.json"
+    # Also write to docs/ for GitHub Pages
+    public_registry = ROOT / "docs" / "registry.json"
     public_registry.parent.mkdir(parents=True, exist_ok=True)
     with open(public_registry, "w", encoding="utf-8") as f:
         f.write(json_str)

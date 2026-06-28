@@ -234,7 +234,7 @@ async function handlePurchase(req, res) {
 // ---------------------------------------------------------------------------
 // Static file serving
 // ---------------------------------------------------------------------------
-const PUBLIC_DIR = path.join(__dirname, "public");
+const PUBLIC_DIR = path.join(__dirname, "docs");
 const MIME_TYPES = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
