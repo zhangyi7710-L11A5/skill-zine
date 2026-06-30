@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "updated": "2026-06-29T14:51:34Z",
+  "updated": "2026-06-30T06:00:21Z",
   "source": "openai/skills + community (auto-synced)",
   "skills": [
     {
@@ -1247,6 +1247,39 @@
         "ref": "main"
       },
       "downloads": 234
+    },
+    {
+      "name": "hermes-tweet",
+      "display_name": "Hermes Tweet",
+      "version": "0.1.6",
+      "author": "Xquik",
+      "description": "Native Hermes Agent X/Twitter plugin guidance for Xquik read-first workflows and approval-gated account actions.",
+      "category": "productivity",
+      "tags": [
+        "hermes-agent",
+        "x",
+        "twitter",
+        "social-media",
+        "automation"
+      ],
+      "platforms": [
+        "codex",
+        "zcode",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "pricing": {
+        "type": "free",
+        "price_usd": 0
+      },
+      "source": {
+        "type": "github",
+        "repo": "zhangyi7710-L11A5/skill-zine",
+        "path": "skills/hermes-tweet",
+        "ref": "main"
+      },
+      "homepage_url": "https://github.com/Xquik-dev/hermes-tweet",
+      "downloads": 0
     },
     {
       "name": "hue",
