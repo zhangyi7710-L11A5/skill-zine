@@ -88,6 +88,22 @@ header {
   padding: 4px 12px;
 }
 
+/* ── Hero badges (stars, visitors) ── */
+.hero-badges {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0.5deg);
+}
+
+.hero-badge-img {
+  height: 20px;
+  opacity: 0.7;
+  filter: grayscale(0.3);
+}
+
 /* ── Search bar ── */
 .search-wrap {
   max-width: 600px;
@@ -457,6 +473,9 @@ footer {
 <header>
   <h1 class="hero-title">Skill Zine</h1>
   <div class="hero-sub">ISSUE #1 — JUNE 2026 — FREE</div>
+  <div class="hero-badges" id="heroBadges">
+    <img class="hero-badge-img" src="https://img.shields.io/github/stars/zhangyi7710-L11A5/skill-zine?style=flat&color=1A1A1A" alt="stars" onerror="this.style.display='none'">
+  </div>
 
   <div class="search-wrap">
     <span class="search-icon">⌕</span>
