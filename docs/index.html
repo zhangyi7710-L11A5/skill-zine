@@ -104,6 +104,15 @@ header {
   filter: grayscale(0.3);
 }
 
+.visitor-counter {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  color: var(--ink-dim);
+  border: 1px solid var(--ink-dim);
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+
 /* ── Search bar ── */
 .search-wrap {
   max-width: 600px;
@@ -475,6 +484,7 @@ footer {
   <div class="hero-sub">ISSUE #1 — JUNE 2026 — FREE</div>
   <div class="hero-badges" id="heroBadges">
     <img class="hero-badge-img" src="https://img.shields.io/github/stars/zhangyi7710-L11A5/skill-zine?style=flat&color=1A1A1A" alt="stars" onerror="this.style.display='none'">
+    <span class="visitor-counter" id="visitorCount">⋯ visitors</span>
   </div>
 
   <div class="search-wrap">
@@ -694,6 +704,17 @@ function showToast(msg) {
   toastTimer = setTimeout(() => el.classList.remove("show"), 2500);
 }
 
+// ── Visitor counter ──
+async function fetchVisitorCount() {
+  try {
+    const resp = await fetch("https://api.countapi.xyz/hit/skill-zine/visits");
+    const data = await resp.json();
+    document.getElementById("visitorCount").textContent = `${data.value} visitors`;
+  } catch (e) {
+    document.getElementById("visitorCount").textContent = "⋯ visitors";
+  }
+}
+
 // ── Init ──
 document.getElementById("searchInput").addEventListener("input", filterAndSearch);
 document.querySelectorAll(".platform-tab").forEach(tab => {
@@ -704,6 +725,7 @@ document.querySelectorAll(".platform-tab").forEach(tab => {
   });
 });
 fetchSkills();
+fetchVisitorCount();
 </script>
 </body>
 </html>
