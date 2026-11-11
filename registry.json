@@ -1186,6 +1186,70 @@
       "downloads": 3700
     },
     {
+      "name": "agent-qa-authoring",
+      "display_name": "agent-qa-authoring",
+      "version": "0.3.4",
+      "author": "vostride",
+      "description": "通过 agent-qa MCP 编写、验证和运行 Web、Android、iOS 自然语言测试。需已配置 agent-qa；FSL-1.1-ALv2，模型及设备等运行成本另计。",
+      "category": "testing",
+      "tags": [
+        "agent-qa",
+        "testing",
+        "e2e",
+        "mobile",
+        "mcp"
+      ],
+      "platforms": [
+        "codex",
+        "claude-code"
+      ],
+      "license": "FSL-1.1-ALv2",
+      "pricing": {
+        "type": "free",
+        "price_usd": 0
+      },
+      "source": {
+        "type": "github",
+        "repo": "vostride/agent-qa",
+        "path": "skills/agent-qa-authoring",
+        "ref": "main"
+      },
+      "homepage_url": "https://vostride.com",
+      "downloads": 0
+    },
+    {
+      "name": "agent-qa-knowledge",
+      "display_name": "agent-qa-knowledge",
+      "version": "0.3.4",
+      "author": "vostride",
+      "description": "查看 agent-qa 运行证据、memidex 持久记忆与验证门控的自我改进记录。需已配置 agent-qa；FSL-1.1-ALv2，模型及设备等运行成本另计。",
+      "category": "testing",
+      "tags": [
+        "agent-qa",
+        "testing",
+        "memidex",
+        "memory",
+        "self-improvement"
+      ],
+      "platforms": [
+        "codex",
+        "claude-code"
+      ],
+      "license": "FSL-1.1-ALv2",
+      "pricing": {
+        "type": "free",
+        "price_usd": 0
+      },
+      "source": {
+        "type": "github",
+        "repo": "vostride/agent-qa",
+        "path": "skills/agent-qa-knowledge",
+        "ref": "main"
+      },
+      "homepage_url": "https://vostride.com",
+      "downloads": 0
+    },
+    {
       "name": "docx",
       "display_name": "DOCX — Word Documents",
       "version": "1.0.0",
